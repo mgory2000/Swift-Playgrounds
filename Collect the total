@@ -1,0 +1,23 @@
+let totalGems = randomNumberOfGems
+var gemCounter = 0
+
+while gemCounter != totalGems {
+    while !isBlocked {
+        moveForward()
+        
+        if isOnGem {
+            collectGem()
+            gemCounter += 1
+        }
+    } 
+    if isBlockedLeft && isBlocked {
+        turnRight()
+    } else { if isBlockedRight && isBlocked {
+        turnLeft()
+        } else { if isBlockedRight && isBlocked && isBlockedLeft {
+        turnRight()
+        turnRight()
+        } 
+        }
+    }
+}
